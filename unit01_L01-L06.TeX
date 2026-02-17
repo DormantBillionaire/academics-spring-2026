@@ -6,6 +6,7 @@
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{custom}
 \usepackage{lipsum}
+\usepackage{enumitem}
 \usepackage{hyperref}
 
 % page formatting
@@ -14,16 +15,17 @@
 
 \renewcommand{\sectionmark}[1]{\markright{\textsf{\arabic{section}. #1}}}
 \renewcommand{\subsectionmark}[1]{}
-\lhead{\textbf{\thepage} \ \ \nouppercase{\rightmark}}
+\lhead{\scriptsize\textbf{\thepage} \ \ \nouppercase{\rightmark}}
 \chead{}
-\rhead{}
+\rhead{\scriptsize MAP2302 - Spring 2026}
 \lfoot{}
 \cfoot{}
 \rfoot{}
 \setlength{\headheight}{14pt}
 
 \linespread{1.03} % give a little extra room
-\setlength{\parskip}{0.5em} % reduce paragraph indent a bit
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
 \setcounter{secnumdepth}{2} % no numbered subsubsections
 \setcounter{tocdepth}{2} % no subsubsections in ToC
 
@@ -74,16 +76,129 @@ resource(s), which I consulted while preparing:
 \newpage
 % Lesson 01 - DEFINITIONS AND TERMINOLOGY, IVP, AND SLOPE FIELDS
 \section{DEFINITIONS AND TERMINOLOGY, IVP, AND SLOPE FIELDS}
-\subsection{(1.1) - Definitions and Terminology}
+\subsection{Definitions and Terminology}
 
-\subsection{(1.2) - Initial Value Problems }
-\subsection{(2.1) - Solution Curves Without A Formula }
+\subsection{Initial Value Problems }
+With initial value problems, we are given a differential equation, and then given a point in the  form of y(x) = y to be plugged into the general solution (Once found) and then to be utilized to 
+solve for the arbitrary constant(s). \\
+
+\textbf{Example Problems and Solutions From Houston Math}
+
+\begin{enumerate}
+  \item Answer the following parts corresponding to each differential equation below:
+  
+  {
+  \begin{align}
+    \frac{dy}{dx} &= 2x \\
+    y^{\prime} &= 6x^{2} + 4 \\
+    x^{2}y^{\prime} &= -1 \\
+    y^{\prime\prime} &= xe^{x}
+  \end{align}
+  }
+
+  \begin{enumerate}[topsep=2pt, itemsep=2pt, leftmargin=*]
+    \item Find the \textbf{general solution}.
+    \item Find the \textbf{particular solution} given that $y(1)=4$.
+    \item Find the \textbf{particular solution} given that $y(1)=3$.
+  \end{enumerate}
+  \item Answer the following parts corresponding to the \textbf{Second-Order Differential Equation}:
+  {
+  \begin{align}
+    \frac{d^{2}y}{dt^{2}} = \cos(t)
+  \end{align}
+    }
+  \begin{enumerate}[topsep=2pt, itemsep=2pt, leftmargin=*]
+    \item Find the \textbf{particular solution} given that $y^{\prime}(0) = 0$ and $y(0) = 1$.
+    \item Find the \textbf{particular solution} given that $y(1)=3$.
+  \end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{(Lesson 2.1) - Solution Curves Without A Formula }
 
 
 \newpage
 % Lesson 02 - SEPARABLE EQUATIONS 
 \section{SEPARABLE EQUATIONS}
 \subsection{(2.2) - (General Overview) Separable Equations}
+If a \textbf{differential equation} can be written with all of the dependednt variable 
+expressions on one side (usually $y$), and all of the independent  variable expressions 
+on the other side(usually $x$), then we say that the equation is \textbf{seprarable}. 
+
+The form we desire when identifying a \textbf{separable equation} is $\frac{dy}{g(y)} = f(x)\,d(x)$. If
+the form is not easy to spot on first glance, then this is the form that we wish to get our given differential equation into. 
+
+Something to note, is that we also want both sides to be integrable. These integrations or antiderivatives may 
+differ by a constant at most, but what we really care about is that the right-side of the equation is integrable. 
+
+Small examples where the equations are already of the form \textbf{$h(y)dy = g(x) dx$}
+
+\begin{align}
+y^{2}\,dy &= 4x\,dx \\
+\frac{dy}{y} &= t e^{t}\,dt \\
+\sec(t)\tan(t)\,dt &= dx \\
+\frac{x+1}{x-1}\,dx &= \frac{dy}{y^{2}+1}
+\end{align}
+
+Here is an example where the equation is not in the form, but is separable (with a bit of work):
+\begin{align}
+\frac{dy}{dx} - x = xy^{2}
+\end{align}
+
+Here is an example of an equation that is \textbf{NOT} separable:
+\begin{align}
+\frac{dy}{dx} - x = y^{2}
+\end{align}
+The above \textbf{is not separable} because there is no way to create a product between x's and y's such that 
+we attain the form \textbf{$h(y)dy = g(x) dx$} or \textbf{$\frac{dy}{g(y)} = f(x)\,d(x)$}.
+
+\noindent\rule{\linewidth}{0.4pt}
+\textbf{General Outline For Solving A Separable Equation}:
+\begin{enumerate}[topsep=2pt, itemsep=2pt, leftmargin=*]
+    \item Separate the variables, making sure each differential is on top 
+    \item Integrate both sides \textbf{with respect to their particular variable}. For example:
+    \begin{enumerate}
+        \item In $\frac{dy}{dx}$, y is the dependent variable, as it is \textbf{dependent} on x.
+        \item In $\frac{dy}{dt}$, y is the dependent variable, as it is \textbf{dependent} on t.
+        \item In $\frac{dx}{dt}$, x is the dependent variable, as it is \textbf{dependent} on t.
+    \end{enumerate}
+    \item Solve for the dependent variable, if reasonable.
+\end{enumerate}
+\noindent\rule{\linewidth}{0.4pt}
+
+\textbf{Example Problems On Separable Equations From Houston Math}
+
+\begin{enumerate}
+  \item Solve the following separable differential equations:
+  
+  {
+  \begin{align}
+    {y^{\prime}} &= \frac{x}{y} \\
+    \frac{dy}{dx} - x &= xy^{2}\\
+    x^{2}y^{\prime} &= -1 \\
+    y^{\prime\prime} &= xe^{x}
+  \end{align}
+  }
+
+  \begin{enumerate}[topsep=2pt, itemsep=2pt, leftmargin=*]
+    \item Find the \textbf{general solution}.
+    \item Find the \textbf{particular solution} given that $y(1)=4$.
+    \item Find the \textbf{particular solution} given that $y(1)=3$.
+  \end{enumerate}
+  \item Answer the following parts corresponding to the \textbf{Second-Order Differential Equation}:
+  {
+  \begin{align}
+    \frac{d^{2}y}{dt^{2}} = \cos(t)
+  \end{align}
+    }
+  \begin{enumerate}[topsep=2pt, itemsep=2pt, leftmargin=*]
+    \item Find the \textbf{particular solution} given that $y^{\prime}(0) = 0$ and $y(0) = 1$.
+    \item Find the \textbf{particular solution} given that $y(1)=3$.
+  \end{enumerate}
+\end{enumerate}
+
+
 \subsection{Graphical Interpretations }
 \subsection{Initial Value Problems (continued)}
 
@@ -126,6 +241,7 @@ resource(s), which I consulted while preparing:
 \subsection{Mixing Problems}
 \subsection{Proportional Change Models}
 
+\section{SOLUTIONS}
 
 
 \newpage
