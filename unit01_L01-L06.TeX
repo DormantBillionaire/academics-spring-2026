@@ -651,9 +651,10 @@ y &= \pm x\sqrt{\,2\ln|x| + C\,} \qquad\text{(take square roots)}
 \boxed{\;y = \pm x\sqrt{\,2\ln|x| + C\,}.\;}
 \]
 
-\newpage
+
 %========================================================
 % Lesson 06 - LINEAR MODELS (Expanded + Worked Examples)
+% General outlines placed at the end of their sections
 %========================================================
 
 \section{LINEAR MODELS}
@@ -699,6 +700,35 @@ Thus the amount remaining is
 \[
 \boxed{\,N(t)=N_0e^{kt}\,}.
 \]
+
+%-----------------------------
+% Outline (Growth/Decay)
+%-----------------------------
+\noindent\rule{\linewidth}{0.4pt}
+\textbf{General Outline For Exponential Growth and Decay:}
+\begin{enumerate}[topsep=2pt, itemsep=2pt, leftmargin=*]
+    \item Identify the changing quantity and name it $Y(t)$.
+    \item If the rate is proportional to the amount present, write
+    \[
+    \frac{dY}{dt}=kY,
+    \]
+    where $k>0$ implies growth and $k<0$ implies decay.
+    \item Separate variables and integrate:
+    \[
+    \frac{1}{Y}\,dY = k\,dt
+    \quad\Rightarrow\quad
+    \ln|Y|=kt+C.
+    \]
+    \item Solve for $Y(t)$:
+    \[
+    Y(t)=Ce^{kt}.
+    \]
+    \item Use the initial condition $Y(0)=Y_0$ to get $C=Y_0$ and write
+    \[
+    \boxed{\,Y(t)=Y_0e^{kt}\,}.
+    \]
+\end{enumerate}
+\noindent\rule{\linewidth}{0.4pt}
 
 \subsection{Logistic Growth}
 
@@ -746,6 +776,27 @@ So
 \boxed{\,P(t)=\frac{k}{1+\left(\frac{k-P_0}{P_0}\right)e^{-rt}}\,}.
 \]
 
+%-----------------------------
+% Outline (Logistic)
+%-----------------------------
+\noindent\rule{\linewidth}{0.4pt}
+\textbf{General Outline For Logistic Growth:}
+\begin{enumerate}[topsep=2pt, itemsep=2pt, leftmargin=*]
+    \item Let $P(t)$ be the population and identify the carrying capacity $k$.
+    \item Write the logistic model:
+    \[
+    \frac{dP}{dt}=rP\left(1-\frac{P}{k}\right)
+    \quad\text{(equivalently } \frac{dP}{dt}=rP\left(\frac{k-P}{k}\right)\text{)}.
+    \]
+    \item Separate variables and integrate (partial fractions are typically required).
+    \item Solve for $P(t)$ and write the standard solution form:
+    \[
+    P(t)=\frac{k}{1+ce^{-rt}}.
+    \]
+    \item Use $P(0)=P_0$ to determine $c=\dfrac{k-P_0}{P_0}$.
+\end{enumerate}
+\noindent\rule{\linewidth}{0.4pt}
+
 \newpage
 \subsection{Newton's Law Of Cooling}
 
@@ -783,7 +834,40 @@ So
 \boxed{\,T(t)=T_m+(T_0-T_m)e^{kt}\,}.
 \]
 
-\newpage
+%-----------------------------
+% Outline (Newton's Law of Cooling)
+%-----------------------------
+\noindent\rule{\linewidth}{0.4pt}
+\textbf{General Outline For Newton's Law of Cooling (or Heating):}
+\begin{enumerate}[topsep=2pt, itemsep=2pt, leftmargin=*]
+    \item Let $T(t)$ be the temperature of the object and let $T_m$ be the (constant) surrounding temperature.
+    \item Write the model:
+    \[
+    \frac{dT}{dt}=k\left(T-T_m\right),
+    \]
+    where typically $k<0$ for cooling (object temperature approaches $T_m$ over time).
+    \item Separate variables:
+    \[
+    \frac{1}{T-T_m}\,dT = k\,dt.
+    \]
+    \item Integrate:
+    \[
+    \ln|T-T_m| = kt + C.
+    \]
+    \item Solve for $T(t)$:
+    \[
+    T-T_m = Ce^{kt}
+    \quad\Rightarrow\quad
+    T(t)=T_m+Ce^{kt}.
+    \]
+    \item Use the initial condition $T(0)=T_0$ to get $C=T_0-T_m$, so
+    \[
+    \boxed{\,T(t)=T_m+(T_0-T_m)e^{kt}\,}.
+    \]
+\end{enumerate}
+\noindent\rule{\linewidth}{0.4pt}
+
+
 \subsection{Mixing Problems}
 
 \noindent \textbf{General Setup (Salt/Sugar Mixing).}
@@ -816,7 +900,32 @@ Solving gives
 \]
 where $A(0)=A_0$.
 
-\newpage
+%-----------------------------
+% Outline (Mixing)
+%-----------------------------
+\noindent\rule{\linewidth}{0.4pt}
+\textbf{General Outline For Solving a Mixing Problem:}
+\begin{enumerate}[topsep=2pt, itemsep=2pt, leftmargin=*]
+    \item Let $A(t)$ be the amount of solute in the tank at time $t$.
+    \item Write the model using
+    \[
+    \frac{dA}{dt}=\text{(rate in)}-\text{(rate out)}.
+    \]
+    \item Compute rate in:
+    \[
+    \text{rate in}=(\text{inflow concentration})\cdot(\text{inflow rate}).
+    \]
+    \item Compute rate out:
+    \[
+    \text{rate out}=\left(\frac{A(t)}{V(t)}\right)\cdot(\text{outflow rate}),
+    \]
+    where $V(t)$ is the volume in the tank.
+    \item Determine $V(t)$ (constant volume if inflow = outflow; otherwise $V(t)$ changes with time).
+    \item Solve the resulting differential equation (often linear in $A(t)$).
+    \item Apply the initial condition $A(0)=A_0$.
+\end{enumerate}
+\noindent\rule{\linewidth}{0.4pt}
+
 \subsection{Motion in One Direction}
 
 \noindent \textbf{General Idea.}
@@ -867,7 +976,24 @@ If $v(0)=v_0$, then $C=v_0$, so
 \boxed{\,v(t)=v_0e^{-kt}\,}.
 \]
 
-\newpage
+%-----------------------------
+% Outline (Motion)
+%-----------------------------
+\noindent\rule{\linewidth}{0.4pt}
+\textbf{General Outline For Modeling Motion in One Dimension:}
+\begin{enumerate}[topsep=2pt, itemsep=2pt, leftmargin=*]
+    \item Choose variables:
+    \begin{enumerate}[topsep=2pt, itemsep=2pt, leftmargin=*]
+        \item $x(t)$ = position, $v(t)=\dfrac{dx}{dt}$ = velocity, $a(t)=\dfrac{dv}{dt}$ = acceleration.
+    \end{enumerate}
+    \item Use the given information to write a differential equation for either $v(t)$ or $x(t)$.
+    \item Solve for $v(t)$ first if the model is written in terms of acceleration $a=\dfrac{dv}{dt}$.
+    \item If position is needed, use $v=\dfrac{dx}{dt}$ and integrate to obtain $x(t)$.
+    \item Apply initial conditions (such as $v(0)=v_0$ or $x(0)=x_0$) to determine constants.
+\end{enumerate}
+\noindent\rule{\linewidth}{0.4pt}
+
+
 \subsection{Proportional Change Models}
 
 \noindent Many models in this course reduce to the proportional change form
@@ -877,6 +1003,8 @@ If $v(0)=v_0$, then $C=v_0$, so
 \boxed{\,Y(t)=Y_0e^{kt}\,}.
 \]
 Common applications include population growth (when $k>0$), radioactive decay (when $k<0$), interest models, and some simplified motion/resistance models.
+
+\newpage
 
 
 \end{document}
