@@ -1,0 +1,96 @@
+\documentclass[10pt]{article}
+ 
+% basic packages
+\usepackage[margin=1in]{geometry}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{custom}
+\usepackage{comment}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage{tabularx}
+
+% page formatting
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\begin{document}
+% make title page
+\thispagestyle{empty}
+\bigskip \
+\vspace{0.1cm}
+
+\begin{center}
+{\fontsize{22}{22} \selectfont Lecture Notes on}
+\vskip 16pt
+{\fontsize{36}{36} \selectfont \bf \sffamily Vectors \& Kinematics}
+\vskip 24pt
+{\fontsize{18}{18} \selectfont \rmfamily Aspen J. Johnson} 
+\vskip 6pt
+{\fontsize{14}{14} \selectfont \ttfamily aspen.johnson@my.pbsc.edu} 
+\vskip 24pt
+\end{center}
+
+\fancyhf{}
+\fancyhead[L]{2026 Reading List}
+\fancyhead[R]{\leftmark}
+\fancyhead[C]{\thepage}
+
+% Making sure the right header is NOT in all caps %
+\renewcommand{\sectionmark}[1]{\markright{\textsf{\arabic{section}: #1}}}
+\rhead{Section\ \nouppercase{\rightmark}}
+\chead{}
+\cfoot{}
+
+\begin{comment}
+   ------ THESE ARE THE PREVIOUS COMMANDS FOR THE HEADER, FOOTER, ETC -------
+\renewcommand{\sectionmark}[1]{\markright{\textsf{\arabic{section}. #1}}}
+\renewcommand{\subsectionmark}[1]{}
+\lhead{\scriptsize\textbf{\thepage}\ \ \nouppercase{\rightmark}}
+\chead{}
+\rhead{\normalfont MAP2302 - Spring 2026}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\setlength{\headheight}{5pt}
+   ------ THESE ARE THE PREVIOUS COMMANDS FOR THE HEADER, FOOTER, ETC -------
+\end{comment}
+
+\linespread{1.03} % give a little extra room
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\setcounter{secnumdepth}{3} % Numbered subsections  
+
+\setcounter{tocdepth}{3}
+\tableofcontents
+
+\section{Vectors and Kinematics}
+
+\subsection{Introduction}
+
+\subsection{Vectors}
+\subsection{Algebra of Vectors}
+\subsubsection{Scaling Vectors}
+
+\subsection{Components of a Vector}
+
+\subsection{Base Vectors}
+
+\subsection{Displacement and the Position Vector}
+
+\subsection{Velocity and Acceleration}
+
+\subsection{Formal Solution of Kinematical Equations}
+
+\subsection{More About the Time Derivative of a Vector}
+
+\subsection{Motion in Plane Polar Coordinates}
+\subsubsection{Polar Coordinates}
+\subsubsection{Velocity in Polar Coordinates}
+\subsubsection{Acceleration in Polar Coordinates}
+
+\newpage
+
+
+\end{document}
