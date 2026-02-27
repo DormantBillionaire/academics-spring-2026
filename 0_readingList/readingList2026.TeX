@@ -7,6 +7,7 @@
 \usepackage{custom}
 \usepackage{comment}
 \usepackage{enumitem}
+\usepackage{multicol}
 
 % page formatting
 \usepackage{fancyhdr}
@@ -57,24 +58,76 @@ spanning both technical and narrative works. Topics include, but are not limited
 \begin{enumerate}
     \item Collected Works 
     \item Fiction and biographical accounts of notable and up and coming computer scientists
-    \item Conceptual textbooks ranging from foundational to advanced topics, such as: 
-    \begin{enumerate}
-        \item \textbf{Data Structures \& Algorithms }
-                \begin{enumerate}
-                    \item \underline{\textbf{Data Structures}} can be defined as the medium through which data and is stored to be 
-                        accessed later on. Simply put, a data structure is a collection of data values, the relationships that take place among them, and 
-                        the functions or operations that can be applied to the data
-                \end{enumerate}
-        \item \textbf{Computer Organization and Design } \\
-        \item \textbf{Operating Systems} \\
-        \item \textbf{Discrete Structures} \\
-        \item \textbf{Machine Learning \& Neural Networks } \\
-        \item \textbf{Reinforcement Learning } \\
-        \item \textbf{Natural Language processing (NLP)} \\
-        \item \textbf{Computer Vision } \\
-        \item \textbf{Information Theory} \\
-    \end{enumerate}
+    \item Conceptual textbooks ranging from foundational to advanced topics, such as: \\
 \end{enumerate}
+
+\underline {Data Structures \& Algorithms }
+
+\textbf{Data Structures can be defined as the medium through which data and is stored to be 
+accessed later on.} Simply put, a data structure is a collection of data values, the relationships that take place among them, and 
+the functions or operations that can be applied to the data. 
+
+Examples of common data structures include, but are not limited to:
+
+\begin{multicols}{2}
+    \begin{itemize}[label=\textemdash, noitemsep]
+
+        \item [] \textbf{Primitive Types:}
+        \begin{enumerate}[label=\arabic*., noitemsep]
+            \item Characters  
+            \item Floating-Point
+            \item Integer
+        \end{enumerate}
+
+        \vspace{4pt}
+        \item [] \textbf{Composite Types or Non-Primitive:}
+        \begin{enumerate}[label=\arabic*., noitemsep]
+            \item Arrays
+            \item Record ("struct")
+            \item Strings 
+            \item Unions 
+            \item Tagged Union
+        \end{enumerate}
+
+        \columnbreak
+        
+        \item [] \textbf{Abstract Data Types:}
+        \begin{enumerate}[label=\arabic*., noitemsep]
+            \item Container 
+            \item List
+            \item Tuples
+            \item Associative Array, Map 
+            \item Set
+            \item Multiset (Bag) 
+            \item Stack 
+            \item Queue
+            \item Graph (Example: Tree, Heap)
+        \end{enumerate}
+
+    \end{itemize}
+\end{multicols}  
+
+\textbf{Algorithms} are present in the field of Mathematics and Computer Science, and algorithm is a finite (must terminate eventually) sequence 
+of instructions used to solve a variety (or class) of specific problems or to perform a computation. \\
+
+In general, a program is classified as an algorithm only if it stops eventually (satisfies the finite condition), although infinite loops, may also be considered and looked into. Mathematical logician 
+George Boolos and probability theorists Richard Jeffrey define an algorithm as an explicit set of instructions for determining an output, that can be followed by a computing machine 
+or human who could only carry out specific elementary operations on symbols. 
+% REMAINING TOPICS TO BE EDITED %
+
+\underline{Additional Topics Covered}
+\begin{itemize}
+    \item \textbf{Computer Organization and Design } \\
+    \item \textbf{Operating Systems}
+    \item \textbf{Discrete Structures}
+    \item \textbf{Machine Learning \& Neural Networks }
+    \item \textbf{Reinforcement Learning }
+    \item \textbf{Natural Language processing (NLP)}
+    \item \textbf{Computer Vision }
+    \item \textbf{Information Theory}
+\end{itemize}
+
+
 
 
 \subsection{Fiction}
