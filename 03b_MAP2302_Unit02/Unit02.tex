@@ -24,8 +24,8 @@
 \linespread{1.03} % give a little extra room
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{6pt}
-\setcounter{secnumdepth}{2} % no numbered subsubsections
-\setcounter{tocdepth}{2} % no subsubsections in ToC
+\setcounter{secnumdepth}{3} % no numbered subsubsections
+\setcounter{tocdepth}{3} % no subsubsections in ToC
 
 \begin{document}
 
@@ -68,43 +68,117 @@ I also want to make use of subsubsections in this paper, so hopefully that goes 
 subsubsections looks really clean, as often done by professor David Tong. 
 
 % make table of contents
-\newpage
 \microtoc
-\newpage
 
 % main content
-% HIGHER ORDER DIFF EQ
+% ============================================================
+% HIGHER ORDER LINEAR DIFFERENTIAL EQUATIONS
+% Aligns with: Blanchard Ch. 3 — Linear Systems / Higher-Order Equations
+% ============================================================
 \section{Higher Order Linear Differential Equations}
-\subsection{Higher order linear ODEs (Introduction)}
-\subsection{Higher Order Linear ODEs (Continued)}
-\subsection{Second-Order Differential Equations (Introduction)}
-\subsection{How to Compute a Wronskian \& Linear Independence}
 
-% HIGHER ORDER DIFF EQ/ REDUCTION OF ORDER 
-\section{Higher Order Linear Differential Equations/ Reduction Of Order}
-\subsection{Reduction of Order (Introduction)}
-\subsection{Reduction of Order (Additional Homogeneous Equation Example)}
-\subsection{Reduction of Order (Second-Order Non-Homogeneous Example)}
+\subsection{Introduction to Higher Order Linear ODEs}
+    \subsubsection{General Form and Terminology}
+    \subsubsection{Existence and Uniqueness of Solutions}
+    \subsubsection{The Superposition Principle}
 
-% HOMOGENEOUS LINEAR EQUATIONS WITH CONSTANT COEFF.
-\section{Homogeneous Linear Equations with Constant Coefficients }
-\subsection{Second-Order Homogeneous Equations (Constant Coefficients Introduction)}
-\subsection{Second-Order Equations with Constant Coefficients (Distinct Real Roots)}
-\subsection{Second-Order Equations with Constant Coefficients (Repeated Real Roots)}
-\subsection{Second-Order Equations with Constant Coefficients (Complex Roots)}
+\subsection{The Structure of Solutions to Homogeneous Equations}
+    \subsubsection{Linear Independence and Solution Sets}
+    \subsubsection{Fundamental Sets of Solutions}
 
-% UNDETERMINED COEFFICIENTS  - SUPERPOSITION APPROACH
-\section{Undetermined Coefficients - Superposition Apporach}
-\subsection{Higher order linear ODEs}
-\subsection{Nonhomogeneous equations}
-\subsection{Method of Undetermined Coefficients (Second Order Non-Homogeneous Equations)}
-\subsection{Undetermined Coefficients (Multiplying by x for Linear Independence)}
+\subsection{The Wronskian and Linear Independence}
+    \subsubsection{Definition and Computation of the Wronskian}
+    \subsubsection{Abel's Theorem}
+    \subsubsection{Using the Wronskian to Verify Independence}
 
-% UNDETERMINED COEFFICIENTS  - ANNIHILATOR APPROACH
-\section{Undetermined Coefficients - Annihilator Approach}
-\subsection{How to use the Annihilator Method to Solve a Differential Equation}
+% ============================================================
+% REDUCTION OF ORDER
+% Aligns with: Blanchard §3.2 — Second-Order Equations
+% ============================================================
+\section{Reduction of Order}
 
+\subsection{Introduction to Reduction of Order}
+    \subsubsection{Motivation: When One Solution Is Known}
+    \subsubsection{Deriving the Reduced Equation via Substitution}
 
-\lipsum[1-4]
+\subsection{Homogeneous Equations}
+    \subsubsection{Worked Example: Finding a Second Independent Solution}
+    \subsubsection{Verification via the Wronskian}
+
+\subsection{Non-Homogeneous Equations}
+    \subsubsection{Adapting Reduction of Order for Non-Homogeneous Cases}
+    \subsubsection{Worked Example: Second-Order Non-Homogeneous Equation}
+
+% ============================================================
+% HOMOGENEOUS LINEAR EQUATIONS WITH CONSTANT COEFFICIENTS
+% Aligns with: Blanchard §3.3–§3.4
+% ============================================================
+\section{Homogeneous Linear Equations with Constant Coefficients}
+
+\subsection{Introduction and the Characteristic Equation}
+    \subsubsection{Deriving the Characteristic (Auxiliary) Equation}
+    \subsubsection{General Solution Framework}
+
+\subsection{Case I: Distinct Real Roots}
+    \subsubsection{Solution Form and General Solution}
+    \subsubsection{Worked Examples}
+
+\subsection{Case II: Repeated Real Roots}
+    \subsubsection{Why Repetition Requires a Modified Solution}
+    \subsubsection{Reduction of Order Justification}
+    \subsubsection{Worked Examples}
+
+\subsection{Case III: Complex Conjugate Roots}
+    \subsubsection{Euler's Formula and Real-Valued Solutions}
+    \subsubsection{Extracting Sine and Cosine Forms}
+    \subsubsection{Worked Examples}
+
+% ============================================================
+% METHOD OF UNDETERMINED COEFFICIENTS — SUPERPOSITION APPROACH
+% Aligns with: Blanchard §3.5
+% ============================================================
+\section{Undetermined Coefficients --- Superposition Approach}
+
+\subsection{Non-Homogeneous Equations and the Structure of Solutions}
+    \subsubsection{The Complementary and Particular Solution}
+    \subsubsection{Superposition Principle for Non-Homogeneous Equations}
+
+\subsection{Selecting the Form of the Particular Solution}
+    \subsubsection{Trial Functions for Polynomials, Exponentials, and Sinusoids}
+    \subsubsection{Table of Standard Trial Function Forms}
+
+\subsection{Worked Examples}
+    \subsubsection{Polynomial Forcing Function}
+    \subsubsection{Exponential Forcing Function}
+    \subsubsection{Sinusoidal Forcing Function}
+
+\subsection{Modification Rule: Multiplying by \(x\) for Linear Independence}
+    \subsubsection{When the Trial Function Solves the Homogeneous Equation}
+    \subsubsection{Worked Examples Applying the Modification Rule}
+
+% ============================================================
+% METHOD OF UNDETERMINED COEFFICIENTS — ANNIHILATOR APPROACH
+% Aligns with: Blanchard §3.6 (operator methods / annihilators)
+% ============================================================
+\section{Undetermined Coefficients --- Annihilator Approach}
+
+\subsection{Differential Operators and Operator Notation}
+    \subsubsection{The \(D\)-Operator and Polynomial Operators}
+    \subsubsection{Factoring Differential Operators}
+
+\subsection{Annihilators}
+    \subsubsection{Definition: What Is an Annihilator?}
+    \subsubsection{Annihilators for Polynomials, Exponentials, and Sinusoids}
+    \subsubsection{Finding the Annihilator of a Given Forcing Function}
+
+\subsection{Solving Non-Homogeneous Equations via Annihilators}
+    \subsubsection{Applying the Annihilator to Both Sides}
+    \subsubsection{Solving the Resulting Higher-Order Homogeneous Equation}
+    \subsubsection{Eliminating Complementary Terms to Isolate the Particular Solution}
+
+\subsection{Worked Examples}
+    \subsubsection{Example with Polynomial Forcing}
+    \subsubsection{Example with Exponential Forcing}
+    \subsubsection{Example Requiring a Higher-Order Annihilator}
 
 \end{document}
